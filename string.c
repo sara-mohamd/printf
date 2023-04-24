@@ -27,8 +27,8 @@ int _printf(const char *format, ...)
 			total += _putchar(*b);
 			continue;
 		}
-		start = b;
-		p++;
+		star = b;
+		b++;
 		while (get_flag(b, &myparams)) /* while char at b is flag char */
 		{
 			b++; /* next char */
@@ -47,4 +47,3 @@ int _printf(const char *format, ...)
 	va_end(var);
 	return (total);
 }
-
