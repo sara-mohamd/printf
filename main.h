@@ -21,16 +21,13 @@
  * struct parameters - parameters struct
  *
  * @unsign: flag if unsigned value
- *
  * @plus_flag: on if plus_flag specified
  * @space_flag: on if hashtag_flag specified
  * @hashtag_flag: on if _flag specified
  * @zero_flag: on if _flag specified
  * @minus_flag: on if _flag specified
- *
  * @width: field width specified
- * @percision: field percision specified
- *
+ * @percision: field precision specified
  * @h_modifier: on if h_modifier is specified
  * @l_modifier: on if l_modifier is specified
  *
@@ -43,12 +40,10 @@ typedef struct parameters
 	unsigned int hashtag_flag   : 1;
 	unsigned int zero_flag      : 1;
 	unsigned int minus_flag     : 1;
-
 	unsigned int width;
-	unsigned int percision;
-
-	unsigned int h_modidfier     : 1;
-	unsigned int l_modidfier     : 1;
+	unsigned int precision;
+	unsigned int h_modifier     : 1;
+	unsigned int l_modifier     : 1;
 } params_t;
 
 /**
@@ -107,10 +102,10 @@ int print_number_left_shift(char *str, params_t *myparams);
 /* params */
 void init_params(params_t *params, va_list var);
 
-/* string_fiels.c module */
-char *get_percision(char *p, params_t *myparams, va_list var);
+/* string_fields */
+char *get_precision(char *p, params_t *myparams, va_list var);
 
-/* _printf.c module */
+/* _printf.c */
 int _printf(const char *format, ...);
 
 #endif
