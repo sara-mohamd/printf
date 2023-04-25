@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int total = 0;
 	va_list var;
-	char *b, *star;
+	char *b, *start;
 	params_t myparams = PARAMS_INIT;
 
 	va_start(var, format);
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			total += _putchar(*b);
 			continue;
 		}
-		star = b;
+		start = b;
 		b++;
 		while (get_flag(b, &myparams)) /* while char at b is flag char */
 		{
