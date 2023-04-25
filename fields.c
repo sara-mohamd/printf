@@ -18,7 +18,7 @@ char *get_precision(char *s, params_t *myparams, va_list var)
         if (*s == '*')
         {
                 d = va_arg(var, int);
-                fs++;
+                s++;
         }
         else
         {
