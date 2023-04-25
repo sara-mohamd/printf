@@ -75,11 +75,11 @@ int print_unsigned(va_list var, params_t *myparams);
 int print_address(va_list var, params_t *myparams);
 
 /* specifier */
-int (*get_specifier(char *fs)) (va_list var, params_t *myparams);
-int get_print_func(char *fs, va_list var, params_t *myparams);
-int get_flag(char *fs, params_t *myparams);
-int get_modifier(char *fs, params_t *myparams);
-char *get_width(char *fs, params_t *myparams, va_list var);
+int (*get_specifier(char *s)) (va_list var, params_t *myparams);
+int get_print_func(char *s, va_list var, params_t *myparams);
+int get_flag(char *s, params_t *myparams);
+int get_modifier(char *s, params_t *myparams);
+char *get_width(char *s, params_t *myparams, va_list var);
 
 /* convert_number */
 int print_hex(va_list var, params_t *myparams);
@@ -103,7 +103,7 @@ int print_number_left_shift(char *str, params_t *myparams);
 void init_params(params_t *myparams, va_list var);
 
 /* string_fields */
-char *get_precision(char *ft, params_t *myparams, va_list var);
+char *get_precision(char *s, params_t *myparams, va_list var);
 
 /* _printf.c */
 int _printf(const char *format, ...);
