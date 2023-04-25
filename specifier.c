@@ -62,7 +62,7 @@ int get_print_func(char *s, va_list var, params_t *myparams)
  *
  * Return: if flag was valid
  */
-int get_flag(char *fs, params_t *myparams)
+int get_flag(char *s, params_t *myparams)
 {
 	int d = 0;
 
@@ -89,7 +89,7 @@ int get_flag(char *fs, params_t *myparams)
 
 /**
  * get_modifier - finds the modifier func
- * @fs: the format string
+ * @s: the format string
  * @myparams: the parameters struct
  *
  * Return: if modifier was valid
@@ -129,7 +129,7 @@ char *get_width(char *s, params_t *myparams, va_list var)
 	}
 	else
 	{
-		while (_isdigit(*fs))
+		while (_isdigit(*s))
 			d = d * 10 + (*s++ - '0');
 	}
 	myparams->width = d;
