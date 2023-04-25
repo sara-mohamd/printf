@@ -76,8 +76,8 @@ int print_address(va_list var, params_t *myparams);
 
 /* specifier */
 int (*get_specifier(char *s)) (va_list var, params_t *myparams);
-int get_print_function(char *s, va_list var, params_t *myparams);
-int get_falg(char *s, params_t *myparams);
+int get_print_fun(char *s, va_list var, params_t *myparams);
+int get_flag(char *s, params_t *myparams);
 int get_modifier(char *s, params_t *myparams);
 char *get_width(char *s, params_t *myparams, va_list var);
 
