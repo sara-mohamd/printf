@@ -2,7 +2,7 @@
 
 /**
  * _printf - prints anything specified
- * @format: the format which is strin
+ * @format: the format which is string 
  *
  * Return: number of bytes that printed
  */
@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int total = 0;
 	va_list var;
-	char *b, *start;
+	char *b, *star;
 	params_t myparams = PARAMS_INIT;
 
 	va_start(var, format);
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			total += _putchar(*b);
 			continue;
 		}
-		start = b;
+		star = b;
 		b++;
 		while (get_flag(b, &myparams)) /* while char at b is flag char */
 		{
